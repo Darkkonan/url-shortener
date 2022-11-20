@@ -1,0 +1,9 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+.idea
+venv
+/urlshortener/settings.py
+/app/__pycache__
+/urlshortener/__pycache__
+db.sqlite3
