@@ -3,6 +3,8 @@ from rest_framework import viewsets
 from rest_framework import permissions
 
 from app.serializers import UserSerializer
+from app.serializers import LinkSerializer
+from app.model import Link
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -12,3 +14,8 @@ class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all().order_by('-date_joined')
     serializer_class = UserSerializer
     permission_classes = [permissions.IsAuthenticated]
+
+
+class LinkViewSet(viewsets.ModelViewSet):
+    queryset = Link.objects.all()
+    serializer_class = LinkSerializer
